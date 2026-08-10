@@ -1,0 +1,726 @@
+
+*** Running vivado
+    with args -log pqc_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source pqc_top.tcl
+
+
+
+****** Vivado v2024.1.2 (64-bit)
+  **** SW Build 5164865 on Thu Sep  5 14:37:11 MDT 2024
+  **** IP Build 5164407 on Fri Sep  6 08:18:11 MDT 2024
+  **** SharedData Build 5164864 on Thu Sep 05 13:09:09 MDT 2024
+  **** Start of session at: Sun Aug  9 21:19:24 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source pqc_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 519.918 ; gain = 115.512
+Command: read_checkpoint -auto_incremental -incremental D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/utils_1/imports/synth_1/pqc_top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/utils_1/imports/synth_1/pqc_top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top pqc_top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 27388
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 981.906 ; gain = 451.066
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-10929] literal value 'd8396807 truncated to fit in 23 bits [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_barrett_mul.v:40]
+WARNING: [Synth 8-10929] literal value 'd46 truncated to fit in 5 bits [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_barrett_mul.v:42]
+WARNING: [Synth 8-10929] literal value 'd524288 truncated to fit in 19 bits [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/dsa/pqc_dsa_ctrl.v:54]
+WARNING: [Synth 8-10929] literal value 'd4 truncated to fit in 2 bits [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/dsa/pqc_dsa_ctrl.v:55]
+WARNING: [Synth 8-10929] literal value 'd524288 truncated to fit in 19 bits [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/dsa/pqc_dsa_ctrl.v:55]
+WARNING: [Synth 8-10929] literal value 'd1344 truncated to fit in 10 bits [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:88]
+WARNING: [Synth 8-10929] literal value 'd1088 truncated to fit in 10 bits [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:88]
+INFO: [Synth 8-6157] synthesizing module 'pqc_top' [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/pqc_top.v:10]
+INFO: [Synth 8-6157] synthesizing module 'pqc_bram_scratchpad' [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_bram_scratchpad.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'pqc_bram_scratchpad' (0#1) [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_bram_scratchpad.v:22]
+INFO: [Synth 8-6157] synthesizing module 'pqc_arbiter' [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_arbiter.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'pqc_arbiter' (0#1) [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_arbiter.v:12]
+INFO: [Synth 8-6157] synthesizing module 'pqc_ntt' [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_ntt.v:14]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'twiddle_kem.hex'; please make sure the file is added to project and has read permission, ignoring [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_ntt.v:46]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'twiddle_dsa.hex'; please make sure the file is added to project and has read permission, ignoring [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_ntt.v:47]
+INFO: [Synth 8-6155] done synthesizing module 'pqc_ntt' (0#1) [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_ntt.v:14]
+INFO: [Synth 8-6157] synthesizing module 'pqc_barrett_mul' [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_barrett_mul.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'pqc_barrett_mul' (0#1) [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_barrett_mul.v:13]
+INFO: [Synth 8-6157] synthesizing module 'pqc_keccak_core' [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:18]
+WARNING: [Synth 8-6090] variable 'A' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:180]
+INFO: [Synth 8-6155] done synthesizing module 'pqc_keccak_core' (0#1) [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:18]
+INFO: [Synth 8-6157] synthesizing module 'pqc_kem_ctrl' [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/kem/pqc_kem_ctrl.v:22]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/kem/pqc_kem_ctrl.v:125]
+INFO: [Synth 8-6155] done synthesizing module 'pqc_kem_ctrl' (0#1) [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/kem/pqc_kem_ctrl.v:22]
+INFO: [Synth 8-6157] synthesizing module 'pqc_dsa_ctrl' [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/dsa/pqc_dsa_ctrl.v:18]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/dsa/pqc_dsa_ctrl.v:114]
+INFO: [Synth 8-6155] done synthesizing module 'pqc_dsa_ctrl' (0#1) [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/dsa/pqc_dsa_ctrl.v:18]
+INFO: [Synth 8-6155] done synthesizing module 'pqc_top' (0#1) [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/pqc_top.v:10]
+WARNING: [Synth 8-6014] Unused sequential element mul_v_reg was removed.  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_ntt.v:90]
+WARNING: [Synth 8-7137] Register bram_addr_reg in module pqc_ntt has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_ntt.v:131]
+WARNING: [Synth 8-7137] Register coeff_u_reg in module pqc_ntt has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_ntt.v:94]
+WARNING: [Synth 8-7137] Register coeff_v_reg in module pqc_ntt has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_ntt.v:142]
+WARNING: [Synth 8-7137] Register bram_wdata_reg in module pqc_ntt has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_ntt.v:150]
+WARNING: [Synth 8-6014] Unused sequential element k_reg was removed.  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_ntt.v:74]
+WARNING: [Synth 8-6014] Unused sequential element s3_qest_reg was removed.  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_barrett_mul.v:93]
+WARNING: [Synth 8-6014] Unused sequential element r_wide_reg was removed.  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_barrett_mul.v:102]
+WARNING: [Synth 8-7137] Register s1_ab_reg in module pqc_barrett_mul has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_barrett_mul.v:79]
+WARNING: [Synth 8-7137] Register s1_q_reg in module pqc_barrett_mul has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_barrett_mul.v:80]
+WARNING: [Synth 8-7137] Register s1_m_reg in module pqc_barrett_mul has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_barrett_mul.v:81]
+WARNING: [Synth 8-7137] Register s1_shift_reg in module pqc_barrett_mul has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_barrett_mul.v:82]
+WARNING: [Synth 8-7137] Register s2_abm_reg in module pqc_barrett_mul has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_barrett_mul.v:86]
+WARNING: [Synth 8-7137] Register s2_q_reg in module pqc_barrett_mul has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_barrett_mul.v:87]
+WARNING: [Synth 8-7137] Register s2_shift_reg in module pqc_barrett_mul has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_barrett_mul.v:88]
+WARNING: [Synth 8-7137] Register s2_ab_reg in module pqc_barrett_mul has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_barrett_mul.v:89]
+WARNING: [Synth 8-7137] Register s3_qestq_reg in module pqc_barrett_mul has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_barrett_mul.v:94]
+WARNING: [Synth 8-7137] Register s3_ab_reg in module pqc_barrett_mul has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_barrett_mul.v:95]
+WARNING: [Synth 8-7137] Register s3_q_reg in module pqc_barrett_mul has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_barrett_mul.v:96]
+WARNING: [Synth 8-7137] Register s4_r_reg in module pqc_barrett_mul has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_barrett_mul.v:105]
+WARNING: [Synth 8-7137] Register result_reg in module pqc_barrett_mul has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_barrett_mul.v:112]
+WARNING: [Synth 8-6014] Unused sequential element C_reg[0] was removed.  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:106]
+WARNING: [Synth 8-6014] Unused sequential element C_reg[1] was removed.  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:106]
+WARNING: [Synth 8-6014] Unused sequential element C_reg[2] was removed.  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:106]
+WARNING: [Synth 8-6014] Unused sequential element C_reg[3] was removed.  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:106]
+WARNING: [Synth 8-6014] Unused sequential element C_reg[4] was removed.  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:106]
+WARNING: [Synth 8-6014] Unused sequential element D_reg[0] was removed.  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:108]
+WARNING: [Synth 8-6014] Unused sequential element D_reg[1] was removed.  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:108]
+WARNING: [Synth 8-6014] Unused sequential element D_reg[2] was removed.  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:108]
+WARNING: [Synth 8-6014] Unused sequential element D_reg[3] was removed.  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:108]
+WARNING: [Synth 8-6014] Unused sequential element D_reg[4] was removed.  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:108]
+WARNING: [Synth 8-6014] Unused sequential element B_reg[0] was removed.  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:121]
+WARNING: [Synth 8-6014] Unused sequential element B_reg[1] was removed.  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:121]
+WARNING: [Synth 8-6014] Unused sequential element B_reg[2] was removed.  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:121]
+WARNING: [Synth 8-6014] Unused sequential element B_reg[3] was removed.  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:121]
+WARNING: [Synth 8-6014] Unused sequential element B_reg[4] was removed.  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:121]
+WARNING: [Synth 8-6014] Unused sequential element B_reg[5] was removed.  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:121]
+WARNING: [Synth 8-6014] Unused sequential element B_reg[6] was removed.  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:121]
+WARNING: [Synth 8-6014] Unused sequential element B_reg[7] was removed.  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:121]
+WARNING: [Synth 8-6014] Unused sequential element B_reg[8] was removed.  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:121]
+WARNING: [Synth 8-6014] Unused sequential element B_reg[9] was removed.  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:121]
+WARNING: [Synth 8-6014] Unused sequential element B_reg[10] was removed.  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:121]
+WARNING: [Synth 8-6014] Unused sequential element B_reg[11] was removed.  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:121]
+WARNING: [Synth 8-6014] Unused sequential element B_reg[12] was removed.  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:121]
+WARNING: [Synth 8-6014] Unused sequential element B_reg[13] was removed.  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:121]
+WARNING: [Synth 8-6014] Unused sequential element B_reg[14] was removed.  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:121]
+WARNING: [Synth 8-6014] Unused sequential element B_reg[15] was removed.  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:121]
+WARNING: [Synth 8-6014] Unused sequential element B_reg[16] was removed.  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:121]
+WARNING: [Synth 8-6014] Unused sequential element B_reg[17] was removed.  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:121]
+WARNING: [Synth 8-6014] Unused sequential element B_reg[18] was removed.  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:121]
+WARNING: [Synth 8-6014] Unused sequential element B_reg[19] was removed.  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:121]
+WARNING: [Synth 8-6014] Unused sequential element B_reg[20] was removed.  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:121]
+WARNING: [Synth 8-6014] Unused sequential element B_reg[21] was removed.  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:121]
+WARNING: [Synth 8-6014] Unused sequential element B_reg[22] was removed.  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:121]
+WARNING: [Synth 8-6014] Unused sequential element B_reg[23] was removed.  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:121]
+WARNING: [Synth 8-6014] Unused sequential element B_reg[24] was removed.  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:121]
+WARNING: [Synth 8-7137] Register A_reg[0] in module pqc_keccak_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:106]
+WARNING: [Synth 8-7137] Register A_reg[1] in module pqc_keccak_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:106]
+WARNING: [Synth 8-7137] Register A_reg[2] in module pqc_keccak_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:106]
+WARNING: [Synth 8-7137] Register A_reg[3] in module pqc_keccak_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:106]
+WARNING: [Synth 8-7137] Register A_reg[4] in module pqc_keccak_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:106]
+WARNING: [Synth 8-7137] Register A_reg[5] in module pqc_keccak_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:106]
+WARNING: [Synth 8-7137] Register A_reg[6] in module pqc_keccak_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:106]
+WARNING: [Synth 8-7137] Register A_reg[7] in module pqc_keccak_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:106]
+WARNING: [Synth 8-7137] Register A_reg[8] in module pqc_keccak_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:106]
+WARNING: [Synth 8-7137] Register A_reg[9] in module pqc_keccak_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:106]
+WARNING: [Synth 8-7137] Register A_reg[10] in module pqc_keccak_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:106]
+WARNING: [Synth 8-7137] Register A_reg[11] in module pqc_keccak_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:106]
+WARNING: [Synth 8-7137] Register A_reg[12] in module pqc_keccak_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:106]
+WARNING: [Synth 8-7137] Register A_reg[13] in module pqc_keccak_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:106]
+WARNING: [Synth 8-7137] Register A_reg[14] in module pqc_keccak_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:106]
+WARNING: [Synth 8-7137] Register A_reg[15] in module pqc_keccak_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:106]
+WARNING: [Synth 8-7137] Register A_reg[16] in module pqc_keccak_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:106]
+WARNING: [Synth 8-7137] Register A_reg[17] in module pqc_keccak_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:106]
+WARNING: [Synth 8-7137] Register A_reg[18] in module pqc_keccak_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:106]
+WARNING: [Synth 8-7137] Register A_reg[19] in module pqc_keccak_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:106]
+WARNING: [Synth 8-7137] Register A_reg[20] in module pqc_keccak_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:106]
+WARNING: [Synth 8-7137] Register A_reg[21] in module pqc_keccak_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:106]
+WARNING: [Synth 8-7137] Register A_reg[22] in module pqc_keccak_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:106]
+WARNING: [Synth 8-7137] Register A_reg[23] in module pqc_keccak_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:106]
+WARNING: [Synth 8-7137] Register A_reg[24] in module pqc_keccak_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:106]
+WARNING: [Synth 8-7137] Register dout_reg in module pqc_keccak_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_keccak_core.v:190]
+WARNING: [Synth 8-7137] Register hash_fn_reg in module pqc_kem_ctrl has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/kem/pqc_kem_ctrl.v:143]
+WARNING: [Synth 8-7137] Register bram_addr_reg in module pqc_kem_ctrl has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/kem/pqc_kem_ctrl.v:146]
+WARNING: [Synth 8-7137] Register hash_din_reg in module pqc_kem_ctrl has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/kem/pqc_kem_ctrl.v:149]
+WARNING: [Synth 8-7137] Register hash_din_valid_reg in module pqc_kem_ctrl has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/kem/pqc_kem_ctrl.v:150]
+WARNING: [Synth 8-7137] Register bram_wdata_reg in module pqc_kem_ctrl has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/kem/pqc_kem_ctrl.v:156]
+WARNING: [Synth 8-7137] Register mul_a_reg in module pqc_kem_ctrl has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/kem/pqc_kem_ctrl.v:253]
+WARNING: [Synth 8-7137] Register mul_b_reg in module pqc_kem_ctrl has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/kem/pqc_kem_ctrl.v:255]
+WARNING: [Synth 8-6014] Unused sequential element coeff_cnt_reg was removed.  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/dsa/pqc_dsa_ctrl.v:109]
+WARNING: [Synth 8-6014] Unused sequential element kappa_reg was removed.  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/dsa/pqc_dsa_ctrl.v:110]
+WARNING: [Synth 8-7137] Register ar_data_reg in module pqc_top has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/pqc_top.v:78]
+WARNING: [Synth 8-3917] design pqc_top has port s_axi_bresp[1] driven by constant 0
+WARNING: [Synth 8-3917] design pqc_top has port s_axi_bresp[0] driven by constant 0
+WARNING: [Synth 8-3917] design pqc_top has port s_axi_rresp[1] driven by constant 0
+WARNING: [Synth 8-3917] design pqc_top has port s_axi_rresp[0] driven by constant 0
+WARNING: [Synth 8-7129] Port hash_dout[63] in module pqc_kem_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hash_dout[62] in module pqc_kem_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hash_dout[61] in module pqc_kem_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hash_dout[60] in module pqc_kem_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hash_dout[59] in module pqc_kem_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hash_dout[58] in module pqc_kem_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hash_dout[57] in module pqc_kem_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hash_dout[56] in module pqc_kem_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hash_dout[55] in module pqc_kem_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hash_dout[54] in module pqc_kem_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hash_dout[53] in module pqc_kem_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hash_dout[52] in module pqc_kem_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hash_dout[51] in module pqc_kem_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hash_dout[50] in module pqc_kem_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hash_dout[49] in module pqc_kem_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hash_dout[48] in module pqc_kem_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hash_dout[47] in module pqc_kem_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hash_dout[46] in module pqc_kem_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hash_dout[45] in module pqc_kem_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hash_dout[44] in module pqc_kem_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hash_dout[43] in module pqc_kem_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hash_dout[42] in module pqc_kem_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hash_dout[41] in module pqc_kem_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hash_dout[40] in module pqc_kem_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hash_dout[39] in module pqc_kem_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hash_dout[38] in module pqc_kem_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hash_dout[37] in module pqc_kem_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hash_dout[36] in module pqc_kem_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hash_dout[35] in module pqc_kem_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hash_dout[34] in module pqc_kem_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hash_dout[33] in module pqc_kem_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hash_dout[32] in module pqc_kem_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port din_valid[3] in module pqc_keccak_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port din_valid[2] in module pqc_keccak_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port din_valid[1] in module pqc_keccak_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port din_valid[0] in module pqc_keccak_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mod_sel[1] in module pqc_barrett_mul is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mod_sel[1] in module pqc_ntt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bram_rdata[31] in module pqc_ntt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bram_rdata[30] in module pqc_ntt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bram_rdata[29] in module pqc_ntt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bram_rdata[28] in module pqc_ntt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bram_rdata[27] in module pqc_ntt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bram_rdata[26] in module pqc_ntt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bram_rdata[25] in module pqc_ntt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bram_rdata[24] in module pqc_ntt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bram_rdata[23] in module pqc_ntt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wstrb[3] in module pqc_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wstrb[2] in module pqc_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wstrb[1] in module pqc_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wstrb[0] in module pqc_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_araddr[7] in module pqc_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_araddr[6] in module pqc_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_araddr[1] in module pqc_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_araddr[0] in module pqc_top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1135.906 ; gain = 605.066
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1135.906 ; gain = 605.066
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1135.906 ; gain = 605.066
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+DSP Debug: swapped A/B pins for adder 0000025E6269D8F0
+DSP Debug: swapped A/B pins for adder 0000025E6269E730
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'pqc_ntt'
+INFO: [Synth 8-802] inferred FSM for state register 'state_fsm_reg' in module 'pqc_keccak_core'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'pqc_dsa_ctrl'
+INFO: [Synth 8-3971] The signal "pqc_bram_scratchpad:/mem_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  S_IDLE |                              000 |                              000
+                  S_RD_U |                              001 |                              001
+                  S_RD_V |                              010 |                              010
+               S_COMPUTE |                              011 |                              011
+                  S_WR_U |                              100 |                              100
+                  S_WR_V |                              101 |                              101
+                  S_NEXT |                              110 |                              110
+                  S_DONE |                              111 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'pqc_ntt'
+INFO: [Device 21-9227] Part: xc7a100tcsg324-1 does not have CEAM library.
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  S_IDLE |                               00 |                               00
+                S_ABSORB |                               01 |                               01
+                  S_PERM |                               10 |                               10
+               S_SQUEEZE |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_fsm_reg' using encoding 'sequential' in module 'pqc_keccak_core'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  S_IDLE |  0000000000000000000000000000001 |                           000000
+          S_KG_HASH_SEED |  0000000000000000000000000000010 |                           000001
+           S_KG_EXPAND_A |  0000000000000000000000000000100 |                           000010
+          S_KG_SAMPLE_S1 |  0000000000000000000000000001000 |                           000011
+          S_KG_SAMPLE_S2 |  0000000000000000000000000010000 |                           000100
+             S_KG_NTT_S1 |  0000000000000000000000000100000 |                           000101
+         S_KG_MATRIX_MUL |  0000000000000000000000001000000 |                           000110
+        S_KG_POWER2ROUND |  0000000000000000000000010000000 |                           000111
+            S_KG_PACK_PK |  0000000000000000000000100000000 |                           001000
+            S_KG_HASH_PK |  0000000000000000000001000000000 |                           001001
+            S_KG_PACK_SK |  0000000000000000000010000000000 |                           001010
+         S_SIGN_HASH_MSG |  0000000000000000000100000000000 |                           001011
+      S_SIGN_EXPAND_MASK |  0000000000000000001000000000000 |                           001100
+            S_SIGN_NTT_Y |  0000000000000000010000000000000 |                           001101
+         S_SIGN_MATRIX_W |  0000000000000000100000000000000 |                           001110
+        S_SIGN_DECOMPOSE |  0000000000000001000000000000000 |                           001111
+           S_SIGN_COMMIT |  0000000000000010000000000000000 |                           010000
+         S_SIGN_SAMPLE_C |  0000000000000100000000000000000 |                           010001
+        S_SIGN_COMPUTE_Z |  0000000000001000000000000000000 |                           010010
+            S_SIGN_CHECK |  0000000000010000000000000000000 |                           010011
+             S_SIGN_HINT |  0000000000100000000000000000000 |                           010100
+         S_SIGN_PACK_SIG |  0000000001000000000000000000000 |                           010101
+            S_VER_UNPACK |  0000000010000000000000000000000 |                           010110
+          S_VER_HASH_MSG |  0000000100000000000000000000000 |                           010111
+          S_VER_EXPAND_A |  0000001000000000000000000000000 |                           011000
+          S_VER_MATRIX_W |  0000010000000000000000000000000 |                           011001
+           S_VER_USEHINT |  0000100000000000000000000000000 |                           011010
+            S_VER_COMMIT |  0001000000000000000000000000000 |                           011011
+             S_VER_CHECK |  0010000000000000000000000000000 |                           011100
+                  S_DONE |  0100000000000000000000000000000 |                           011101
+                 S_ERROR |  1000000000000000000000000000000 |                           011110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'pqc_dsa_ctrl'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:13 . Memory (MB): peak = 1262.969 ; gain = 732.129
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   46 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 1     
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input   24 Bit       Adders := 1     
+	   4 Input   24 Bit       Adders := 1     
+	   2 Input   23 Bit       Adders := 1     
+	   3 Input   23 Bit       Adders := 3     
+	   3 Input   10 Bit       Adders := 1     
+	   2 Input    9 Bit       Adders := 6     
+	   2 Input    8 Bit       Adders := 4     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 3     
+	   2 Input    3 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 2     
++---XORs : 
+	   2 Input     64 Bit         XORs := 59    
+	   5 Input     64 Bit         XORs := 5     
++---Registers : 
+	               69 Bit    Registers := 1     
+	               64 Bit    Registers := 52    
+	               48 Bit    Registers := 2     
+	               46 Bit    Registers := 3     
+	               45 Bit    Registers := 1     
+	               32 Bit    Registers := 9     
+	               23 Bit    Registers := 10    
+	               15 Bit    Registers := 2     
+	                9 Bit    Registers := 6     
+	                8 Bit    Registers := 5     
+	                5 Bit    Registers := 5     
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 49    
++---Multipliers : 
+	              23x46  Multipliers := 1     
+	              23x45  Multipliers := 1     
++---RAMs : 
+	            1024K Bit	(32768 X 32 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   64 Bit        Muxes := 156   
+	  25 Input   64 Bit        Muxes := 1     
+	   4 Input   64 Bit        Muxes := 50    
+	   8 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 2     
+	  14 Input   32 Bit        Muxes := 1     
+	   4 Input   32 Bit        Muxes := 1     
+	  31 Input   31 Bit        Muxes := 1     
+	   4 Input   31 Bit        Muxes := 1     
+	   2 Input   23 Bit        Muxes := 8     
+	   8 Input   15 Bit        Muxes := 1     
+	   2 Input   14 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 1     
+	   3 Input   10 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 6     
+	   2 Input    8 Bit        Muxes := 4     
+	   8 Input    8 Bit        Muxes := 2     
+	   9 Input    8 Bit        Muxes := 1     
+	  14 Input    8 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 2     
+	   4 Input    5 Bit        Muxes := 2     
+	   4 Input    4 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 3     
+	  31 Input    4 Bit        Muxes := 2     
+	  12 Input    3 Bit        Muxes := 1     
+	   4 Input    3 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 5     
+	  14 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 186   
+	   4 Input    1 Bit        Muxes := 36    
+	   8 Input    1 Bit        Muxes := 12    
+	  14 Input    1 Bit        Muxes := 18    
+	  31 Input    1 Bit        Muxes := 11    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3936] Found unconnected internal register 'mul_pp_reg' and it is trimmed from '48' to '29' bits. [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_ntt.v:85]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mul_pp_reg' and it is trimmed from '48' to '17' bits. [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_ntt.v:85]
+DSP Report: Generating DSP mul_pp0, operation Mode is: A*B.
+DSP Report: operator mul_pp0 is absorbed into DSP mul_pp0.
+DSP Report: operator mul_pp0 is absorbed into DSP mul_pp0.
+DSP Report: Generating DSP mul_pp_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register mul_pp_reg is absorbed into DSP mul_pp_reg.
+DSP Report: operator mul_pp0 is absorbed into DSP mul_pp_reg.
+DSP Report: operator mul_pp0 is absorbed into DSP mul_pp_reg.
+DSP Report: Generating DSP s1_ab0, operation Mode is: A*B.
+DSP Report: operator s1_ab0 is absorbed into DSP s1_ab0.
+DSP Report: operator s1_ab0 is absorbed into DSP s1_ab0.
+DSP Report: Generating DSP s1_ab0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator s1_ab0 is absorbed into DSP s1_ab0.
+DSP Report: operator s1_ab0 is absorbed into DSP s1_ab0.
+DSP Report: Generating DSP s2_abm0, operation Mode is: A*B.
+DSP Report: operator s2_abm0 is absorbed into DSP s2_abm0.
+DSP Report: operator s2_abm0 is absorbed into DSP s2_abm0.
+DSP Report: Generating DSP s2_abm0, operation Mode is: A*B.
+DSP Report: operator s2_abm0 is absorbed into DSP s2_abm0.
+DSP Report: operator s2_abm0 is absorbed into DSP s2_abm0.
+DSP Report: Generating DSP s2_abm0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator s2_abm0 is absorbed into DSP s2_abm0.
+DSP Report: operator s2_abm0 is absorbed into DSP s2_abm0.
+DSP Report: Generating DSP s3_qestq0, operation Mode is: A*B.
+DSP Report: operator s3_qestq0 is absorbed into DSP s3_qestq0.
+DSP Report: operator s3_qestq0 is absorbed into DSP s3_qestq0.
+DSP Report: Generating DSP s3_qestq0, operation Mode is: A*B.
+DSP Report: operator s3_qestq0 is absorbed into DSP s3_qestq0.
+DSP Report: operator s3_qestq0 is absorbed into DSP s3_qestq0.
+DSP Report: Generating DSP s3_qestq0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator s3_qestq0 is absorbed into DSP s3_qestq0.
+DSP Report: operator s3_qestq0 is absorbed into DSP s3_qestq0.
+WARNING: [Synth 8-3917] design pqc_top has port s_axi_bresp[1] driven by constant 0
+WARNING: [Synth 8-3917] design pqc_top has port s_axi_bresp[0] driven by constant 0
+WARNING: [Synth 8-3917] design pqc_top has port s_axi_rresp[1] driven by constant 0
+WARNING: [Synth 8-3917] design pqc_top has port s_axi_rresp[0] driven by constant 0
+WARNING: [Synth 8-7129] Port s_axi_wstrb[3] in module pqc_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wstrb[2] in module pqc_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wstrb[1] in module pqc_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wstrb[0] in module pqc_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_araddr[7] in module pqc_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_araddr[6] in module pqc_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_araddr[1] in module pqc_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_araddr[0] in module pqc_top is either unconnected or has no load
+WARNING: [Synth 8-3936] Found unconnected internal register 'u_bram/pa_rd_reg' and it is trimmed from '32' to '23' bits. [D:/AMDProjects/UnifiedPQC/UnifiedPQC.srcs/sources_1/imports/rtl/shared/pqc_bram_scratchpad.v:55]
+INFO: [Synth 8-3971] The signal "pqc_top/u_bram/mem_reg" was recognized as a true dual port RAM template.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][63]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][63]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][62]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][62]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][61]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][61]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][60]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][60]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][59]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][59]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][58]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][58]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][57]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][57]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][56]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][56]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][55]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][55]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][54]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][54]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][53]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][53]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][52]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][52]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][51]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][51]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][50]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][50]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][49]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][49]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][48]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][48]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][47]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][47]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][46]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][46]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][45]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][45]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][44]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][44]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][43]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][43]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][42]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][42]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][41]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][41]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][40]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][40]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][39]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][39]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][38]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][38]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][37]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][37]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][36]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][36]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][35]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][35]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][34]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][34]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][33]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][33]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][32]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][32]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][31]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][31]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][30]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][30]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][29]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][29]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][28]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][28]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][27]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][27]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][26]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][26]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][25]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][25]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][24]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][24]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][23]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][23]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][22]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][22]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][21]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][21]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][20]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][20]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][19]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][19]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][18]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][18]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][17]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][17]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][16]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][16]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][15]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][15]_C) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][14]_LDC) is unused and will be removed from module pqc_keccak_core.
+WARNING: [Synth 8-3332] Sequential element (A_reg[21][14]_C) is unused and will be removed from module pqc_keccak_core.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:35 . Memory (MB): peak = 1810.492 ; gain = 1279.652
+---------------------------------------------------------------------------------
+ Sort Area is pqc_top__GB1 s2_abm0_5 : 0 0 : 3340 6859 : Used 1 time 0
+ Sort Area is pqc_top__GB1 s2_abm0_5 : 0 1 : 3519 6859 : Used 1 time 0
+ Sort Area is pqc_top__GB1 s3_qestq0_9 : 0 0 : 3340 6859 : Used 1 time 0
+ Sort Area is pqc_top__GB1 s3_qestq0_9 : 0 1 : 3519 6859 : Used 1 time 0
+ Sort Area is pqc_top__GB1 mul_pp0_0 : 0 0 : 3340 4395 : Used 1 time 0
+ Sort Area is pqc_top__GB1 mul_pp0_0 : 0 1 : 1055 4395 : Used 1 time 0
+ Sort Area is pqc_top__GB1 s1_ab0_3 : 0 0 : 3340 4366 : Used 1 time 0
+ Sort Area is pqc_top__GB1 s1_ab0_3 : 0 1 : 1026 4366 : Used 1 time 0
+ Sort Area is pqc_top__GB1 s2_abm0_7 : 0 0 : 2559 2559 : Used 1 time 0
+ Sort Area is pqc_top__GB1 s3_qestq0_a : 0 0 : 2350 2350 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------+----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object     | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|pqc_top     | u_bram/mem_reg | 32 K x 32(READ_FIRST)  | W | R | 32 K x 32(READ_FIRST)  | W | R | Port A and B     | 0      | 32     | 
++------------+----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++----------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name     | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++----------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|pqc_ntt         | A*B            | 24     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pqc_ntt         | (PCIN>>17)+A*B | 24     | 7      | -      | -      | 29     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|pqc_barrett_mul | A*B            | 24     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pqc_barrett_mul | (PCIN>>17)+A*B | 24     | 7      | -      | -      | 29     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pqc_barrett_mul | A*B            | 24     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pqc_barrett_mul | A*B            | 24     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pqc_barrett_mul | (PCIN>>17)+A*B | 24     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pqc_barrett_mul | A*B            | 24     | 12     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pqc_barrett_mul | A*B            | 24     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pqc_barrett_mul | (PCIN>>17)+A*B | 24     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++----------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:35 . Memory (MB): peak = 1810.492 ; gain = 1279.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------+----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object     | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|pqc_top     | u_bram/mem_reg | 32 K x 32(READ_FIRST)  | W | R | 32 K x 32(READ_FIRST)  | W | R | Port A and B     | 0      | 32     | 
++------------+----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:39 ; elapsed = 00:00:37 . Memory (MB): peak = 1810.492 ; gain = 1279.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:00:42 . Memory (MB): peak = 1810.492 ; gain = 1279.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:44 ; elapsed = 00:00:42 . Memory (MB): peak = 1810.492 ; gain = 1279.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:44 ; elapsed = 00:00:42 . Memory (MB): peak = 1810.492 ; gain = 1279.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:44 ; elapsed = 00:00:42 . Memory (MB): peak = 1810.492 ; gain = 1279.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:00:42 . Memory (MB): peak = 1810.492 ; gain = 1279.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:00:42 . Memory (MB): peak = 1810.492 ; gain = 1279.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    16|
+|3     |LUT1   |     5|
+|4     |LUT2   |   109|
+|5     |LUT3   |    44|
+|6     |LUT4   |    87|
+|7     |LUT5   |    63|
+|8     |LUT6   |    96|
+|9     |FDCE   |   297|
+|10    |FDPE   |     2|
+|11    |FDRE   |    17|
+|12    |FDSE   |    17|
+|13    |IBUF   |    47|
+|14    |OBUF   |    42|
++------+-------+------+
+
+Report Instance Areas: 
++------+-----------+----------------+------+
+|      |Instance   |Module          |Cells |
++------+-----------+----------------+------+
+|1     |top        |                |   843|
+|2     |  u_arb    |pqc_arbiter     |   158|
+|3     |  u_dsa    |pqc_dsa_ctrl    |    97|
+|4     |  u_keccak |pqc_keccak_core |    35|
+|5     |  u_kem    |pqc_kem_ctrl    |   165|
+|6     |  u_mul    |pqc_barrett_mul |     6|
+|7     |  u_ntt    |pqc_ntt         |   101|
++------+-----------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:00:42 . Memory (MB): peak = 1810.492 ; gain = 1279.652
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 2 critical warnings and 4992 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:44 ; elapsed = 00:00:42 . Memory (MB): peak = 1810.492 ; gain = 1279.652
+Synthesis Optimization Complete : Time (s): cpu = 00:00:44 ; elapsed = 00:00:42 . Memory (MB): peak = 1810.492 ; gain = 1279.652
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1810.492 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 16 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1810.492 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 4fa53a0f
+INFO: [Common 17-83] Releasing license: Synthesis
+44 Infos, 275 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:47 ; elapsed = 00:00:44 . Memory (MB): peak = 1810.492 ; gain = 1279.652
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1810.492 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/AMDProjects/UnifiedPQC/UnifiedPQC.runs/synth_1/pqc_top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file pqc_top_utilization_synth.rpt -pb pqc_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Aug  9 21:20:18 2026...

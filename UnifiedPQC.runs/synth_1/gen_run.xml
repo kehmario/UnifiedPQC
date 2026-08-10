@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1786328360" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/pqc_top.dcp">
+  <File Type="PA-TCL" Name="pqc_top.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="pqc_top_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="pqc_top_reports.tcl"/>
+  <File Type="RDS-RDS" Name="pqc_top.vds"/>
+  <File Type="RDS-UTIL" Name="pqc_top_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="pqc_top_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="pqc_top.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="pqc_top_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="pqc_top_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/shared/pqc_arbiter.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/shared/pqc_arbiter.v"/>
+        <Attr Name="ImportTime" Val="1786326640"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/shared/pqc_barrett_mul.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/shared/pqc_barrett_mul.v"/>
+        <Attr Name="ImportTime" Val="1786326640"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/shared/pqc_bram_scratchpad.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/shared/pqc_bram_scratchpad.v"/>
+        <Attr Name="ImportTime" Val="1786326640"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/dsa/pqc_dsa_ctrl.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/dsa/pqc_dsa_ctrl.v"/>
+        <Attr Name="ImportTime" Val="1786326640"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/shared/pqc_keccak_core.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/shared/pqc_keccak_core.v"/>
+        <Attr Name="ImportTime" Val="1786326640"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/kem/pqc_kem_ctrl.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/kem/pqc_kem_ctrl.v"/>
+        <Attr Name="ImportTime" Val="1786326640"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/shared/pqc_ntt.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/shared/pqc_ntt.v"/>
+        <Attr Name="ImportTime" Val="1786326640"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/pqc_top.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/pqc_top.v"/>
+        <Attr Name="ImportTime" Val="1786326640"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="pqc_top"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/pqc_top.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>
