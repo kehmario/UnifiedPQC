@@ -1,0 +1,24 @@
+# --- Self-verification scratch (verification/) ---
+verification/repro_work/
+verification/repro_clean*/
+verification/__pycache__/
+verification/*.vvp
+verification/batch
+verification/xsim.dir/
+verification/*.jou
+verification/*.log
+verification/*.pb
+verification/*.wdb
+verification/.Xil/
+
+# --- Vivado scratch / generated artifacts ---
+*.jou
+*.str
+.Xil/
+vivado*.log
+vivado*.backup.log
+usage_statistics_webtalk.*
+
+# --- Python ---
+__pycache__/
+*.pyc

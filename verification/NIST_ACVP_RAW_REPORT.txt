@@ -1,0 +1,108 @@
+================================================================================
+ NIST ACVP VALIDATION - RAW REPORT
+ Unified ML-KEM / ML-DSA arithmetic accelerator: shared NTT engine
+ Generated: 2026-09-03 15:31:22 UTC
+================================================================================
+
+SOURCE   : NIST ACVP vectors (usnistgov/ACVP-Server) via mjosaarinen/py-acvp-pqc
+           py-acvp-pqc commit: 1c85995
+REFERENCE: py-acvp-pqc self-contained FIPS 203/204 (independent of the design)
+DUT      : pqc_ntt_mont (synthesis variant), Icarus Verilog simulation
+
+--------------------------------------------------------------------------------
+[1] VECTOR PROVENANCE  (internalProjection.json)
+--------------------------------------------------------------------------------
+  ML-KEM-keyGen-FIPS203          groups= 3  tests=  75
+                                 sha256=27e86a4f2b88f2220e2e67b4237404caca2749de09b7d01e5e7da8efeff85791
+  ML-KEM-encapDecap-FIPS203      groups= 6  tests= 105
+                                 sha256=e2171eb30ade86e95aa1735e8e00fa3467d2a2229914ebfd9ef91c1a605673c4
+  ML-DSA-keyGen-FIPS204          groups= 3  tests=  75
+                                 sha256=a815e7f1266cc54525240ced5aec2f005545c1d86b200a981cb24d21ed326402
+  ML-DSA-sigGen-FIPS204          groups=30  tests= 420
+                                 sha256=1d8780668ab357feed8eb58c324b6f6a842ae95a1e6c514dda3393e83369ee97
+  ML-DSA-sigVer-FIPS204          groups=12  tests= 180
+                                 sha256=1be0f21a6a3dbea6dc442a5b1b0340eb5912ee2bfa3bd9a86cf04c1c7a17aecf
+
+  NOTE ON THESE HASHES: they are computed over the py-acvp-pqc MIRROR of the NIST
+  vectors (commit 1c85995), which is the snapshot this validation ran against.
+  NIST updates the ACVP-Server vectors over time, so a fresh pull from
+  usnistgov/ACVP-Server master will generally produce DIFFERENT hashes. This is
+  expected, not a discrepancy: reproduce.sh pulls the live NIST files, re-screens
+  them with the independent reference (still 0 FAIL), re-extracts KATs (public keys
+  still == ACVP), and re-runs the hardware (still 8/8 byte-exact). The validation
+  chain holds on whatever vector snapshot is current; only the hash values move.
+
+--------------------------------------------------------------------------------
+[2] VECTOR AUTHENTICITY SCREENING
+    Independent reference run against the NIST vectors (verbatim output).
+--------------------------------------------------------------------------------
+
+  $ python3 fips203.py   [ML-KEM / FIPS 203]
+    ML-KEM KeyGen (fips203.py): PASS= 75  FAIL= 0
+    ML-KEM Encaps (fips203.py): PASS= 75  FAIL= 0
+    ML-KEM Decaps (fips203.py): PASS= 30  FAIL= 0
+    ML-KEM (fips203.py) -- Total FAIL= 0
+
+  $ python3 fips204.py   [ML-DSA / FIPS 204]
+    ML-DSA KeyGen (fips204.py): PASS= 75  FAIL= 0
+    ML-DSA SigGen (fips204.py): PASS= 420  FAIL= 0
+    ML-DSA SigVer (fips204.py): PASS= 180  FAIL= 0
+    ML-DSA (fips204.py) -- Total FAIL= 0
+
+  VERDICT: reference reproduces all NIST expected answers, 0 failures ->
+           vectors are authentic and self-consistent.
+
+--------------------------------------------------------------------------------
+[3] NIST-TRACEABLE INTERMEDIATE EXTRACTION  (per ACVP KeyGen case)
+    Reference NTT instrumented during KeyGen; public key compared to ACVP.
+--------------------------------------------------------------------------------
+
+  ML-KEM-512  (ML-KEM-keyGen-FIPS203)
+    tcId  d (seed) prefix    ek==ACVP  NTT in[:4]             NTT out[:4]
+       1  CDF4E658BDD4636F        YES  [3328, 3327, 1, 3326]  [356, 2852, 248, 1240]
+       2  795085D98DC04E0B        YES  [1, 3328, 0, 2]        [1975, 88, 2868, 3]
+       3  9D52EE5C8D01A4FE        YES  [1, 0, 1, 3328]        [2440, 2027, 135, 1738]
+       4  FD4123C71ADC28C9        YES  [0, 0, 3327, 3327]     [1318, 2383, 1549, 1667]
+       5  471176A5ED5D2D64        YES  [3327, 2, 0, 3328]     [646, 3070, 3144, 2546]
+       6  6A961162C8C225E3        YES  [2, 3328, 3328, 3]     [2543, 2944, 1081, 3081]
+       7  C5158850B8ABB0BC        YES  [3328, 1, 2, 0]        [784, 2946, 3074, 2254]
+       8  781906C2A217FD55        YES  [0, 3328, 0, 3328]     [1054, 2420, 2631, 2613]
+
+  ML-DSA-44  (ML-DSA-keyGen-FIPS204)
+    tcId  seed prefix        pk==ACVP  NTT in[:4]             NTT out[:4]
+       1  079EAB79AB14747C        YES  [2, 0, 0, -2]          [5052337, 5562731, 398753, 2413908]
+       2  22B8B2E0107C7CA1        YES  [-2, 0, 2, 1]          [2034600, 7315344, 5549713, 6921228]
+       3  D9F891605500D2DC        YES  [0, -2, 2, 0]          [743074, 927861, 1257045, 6932665]
+       4  2245E65DD17C8F9D        YES  [-2, 0, -1, -2]        [5652397, 8374879, 1332946, 4835028]
+       5  60DFD5FAA4DA3F12        YES  [2, 1, 1, -1]          [2131026, 5545149, 5030655, 2413930]
+       6  198CE3FF27906808        YES  [-1, 1, 1, 2]          [5904017, 3479751, 1806383, 1928322]
+       7  2E6D8001D02F938D        YES  [1, 2, 0, 2]           [7383502, 2569743, 2748390, 99915]
+       8  CBF2D33F3F374D56        YES  [2, 0, 1, 1]           [4044099, 83753, 5115977, 1839490]
+
+--------------------------------------------------------------------------------
+[4] HARDWARE NTT COMPARISON  (Icarus Verilog, per KAT byte-exact)
+    ACVP-derived input polynomials driven through pqc_ntt_mont; NTT-domain
+    output byte-compared to the reference (256 coefficients per KAT).
+--------------------------------------------------------------------------------
+
+  $ vvp batch +MS=0 +MEM=kem_batch.mem   [ML-KEM, q=3329]
+    ACVP NTT batch (ML-KEM): 8/8 KATs byte-exact
+
+  $ vvp batch +MS=1 +MEM=dsa_batch.mem   [ML-DSA, q=8380417]
+    ACVP NTT batch (ML-DSA): 8/8 KATs byte-exact
+
+--------------------------------------------------------------------------------
+[5] SUMMARY
+--------------------------------------------------------------------------------
+  Vectors screened authentic : ML-KEM 180/180, ML-DSA 675/675 cases, 0 FAIL
+  KeyGen outputs == ACVP     : ML-KEM 8/8, ML-DSA 8/8 (extracted cases)
+  Hardware NTT byte-exact     : ML-KEM 8/8 KATs, ML-DSA 8/8 KATs (0/256 mism.)
+
+  SCOPE (honest): component/intermediate-value validation of the shared NTT
+  engine, anchored to NIST ACVP. NOT full scheme-level ACVP: the hardware does
+  NOT perform KEM Encaps/Decaps or DSA Sign/Verify end-to-end. Validated in
+  simulation. Same method extends to the Montgomery multiplier and matvec.
+
+================================================================================
+ END OF RAW REPORT
+================================================================================
