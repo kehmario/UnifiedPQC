@@ -22,3 +22,13 @@ usage_statistics_webtalk.*
 # --- Python ---
 __pycache__/
 *.pyc
+
+# --- UVM env scratch (verification/uvm/) ---
+verification/uvm/obj_dir/
+verification/uvm/logs/
+verification/uvm/build.log
+verification/uvm/xsim_logs/
+verification/uvm/xsim.dir/
+verification/uvm/mutants/rtl/
+verification/uvm/mutants/logs/
+verification/uvm/mutants/obj_*/
