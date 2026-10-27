@@ -1,0 +1,7 @@
+m1_ninv_kem            UVM TEST FAILED     [SB/MISMATCH]x194, [SB/FAIL]x30, [ROUNDTRIP]x6
+m2_no_condsub_kem      UVM TEST FAILED     [BUS]x1801, [SB/MISMATCH]x134, [SB/FAIL]x20, [SB/KAT]x8, [ROUNDTRIP]x1
+m3_timing_leak         UVM TEST FAILED     [SB/TIMING]x166
+m4_start_while_busy    UVM TEST FAILED     [SB/MISMATCH]x64, [SB/TIMING]x8, [SB/STRUCT]x8, [SB/FAIL]x8
+m5_dsa_layers          UVM TEST FAILED     [SB/MISMATCH]x408, [SB/STRUCT]x54, [SB/FAIL]x51, [SB/KAT]x8, [ROUNDTRIP]x6
+m6_done_two_cycles     UVM TEST FAILED     [SVA]x184, SVA: done held high for more than one cyclex184
+m7_dsa_intt_bfly       UVM TEST FAILED     [SB/MISMATCH]x336, [SB/FAIL]x42, [ROUNDTRIP]x6

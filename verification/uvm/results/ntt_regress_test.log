@@ -1,0 +1,50 @@
+UVM_INFO @ 0: reporter [RNTST] Running test ntt_regress_test...
+UVM_INFO ntt_scoreboard.svh(36) @ 0: uvm_test_top.env.sb [REF] reference constants derived and verified (zeta orders, n^-1)
+UVM_INFO ntt_scoreboard.svh(111) @ 99930000: uvm_test_top.env.sb [SB/KAT] ML-KEM-NTT ACVP-KAT#0: HW == REF == ACVP-derived KAT (256/256)
+UVM_INFO ntt_scoreboard.svh(111) @ 199810000: uvm_test_top.env.sb [SB/KAT] ML-KEM-NTT ACVP-KAT#1: HW == REF == ACVP-derived KAT (256/256)
+UVM_INFO ntt_scoreboard.svh(111) @ 299690000: uvm_test_top.env.sb [SB/KAT] ML-KEM-NTT ACVP-KAT#2: HW == REF == ACVP-derived KAT (256/256)
+UVM_INFO ntt_scoreboard.svh(111) @ 399570000: uvm_test_top.env.sb [SB/KAT] ML-KEM-NTT ACVP-KAT#3: HW == REF == ACVP-derived KAT (256/256)
+UVM_INFO ntt_scoreboard.svh(111) @ 499450000: uvm_test_top.env.sb [SB/KAT] ML-KEM-NTT ACVP-KAT#4: HW == REF == ACVP-derived KAT (256/256)
+UVM_INFO ntt_scoreboard.svh(111) @ 599330000: uvm_test_top.env.sb [SB/KAT] ML-KEM-NTT ACVP-KAT#5: HW == REF == ACVP-derived KAT (256/256)
+UVM_INFO ntt_scoreboard.svh(111) @ 699210000: uvm_test_top.env.sb [SB/KAT] ML-KEM-NTT ACVP-KAT#6: HW == REF == ACVP-derived KAT (256/256)
+UVM_INFO ntt_scoreboard.svh(111) @ 799090000: uvm_test_top.env.sb [SB/KAT] ML-KEM-NTT ACVP-KAT#7: HW == REF == ACVP-derived KAT (256/256)
+UVM_INFO ntt_scoreboard.svh(111) @ 914330000: uvm_test_top.env.sb [SB/KAT] ML-DSA-NTT ACVP-KAT#0: HW == REF == ACVP-derived KAT (256/256)
+UVM_INFO ntt_scoreboard.svh(111) @ 1029570000: uvm_test_top.env.sb [SB/KAT] ML-DSA-NTT ACVP-KAT#1: HW == REF == ACVP-derived KAT (256/256)
+UVM_INFO ntt_scoreboard.svh(111) @ 1144810000: uvm_test_top.env.sb [SB/KAT] ML-DSA-NTT ACVP-KAT#2: HW == REF == ACVP-derived KAT (256/256)
+UVM_INFO ntt_scoreboard.svh(111) @ 1260050000: uvm_test_top.env.sb [SB/KAT] ML-DSA-NTT ACVP-KAT#3: HW == REF == ACVP-derived KAT (256/256)
+UVM_INFO ntt_scoreboard.svh(111) @ 1375290000: uvm_test_top.env.sb [SB/KAT] ML-DSA-NTT ACVP-KAT#4: HW == REF == ACVP-derived KAT (256/256)
+UVM_INFO ntt_scoreboard.svh(111) @ 1490530000: uvm_test_top.env.sb [SB/KAT] ML-DSA-NTT ACVP-KAT#5: HW == REF == ACVP-derived KAT (256/256)
+UVM_INFO ntt_scoreboard.svh(111) @ 1605770000: uvm_test_top.env.sb [SB/KAT] ML-DSA-NTT ACVP-KAT#6: HW == REF == ACVP-derived KAT (256/256)
+UVM_INFO ntt_sequences.svh(121) @ 1721010000: uvm_test_top.env.agt.sqr@@k [KAT] 16 ACVP-derived KATs driven
+UVM_INFO ntt_scoreboard.svh(111) @ 1721010000: uvm_test_top.env.sb [SB/KAT] ML-DSA-NTT ACVP-KAT#7: HW == REF == ACVP-derived KAT (256/256)
+UVM_INFO ntt_coverage.svh(90) @ 21571455000: uvm_test_top.env.cov [COV] covergroup cg_ntt: 100.0%
+UVM_INFO ntt_coverage.svh(93) @ 21571455000: uvm_test_top.env.cov [COV] bin table: 52/52 required bins hit
+UVM_INFO ntt_scoreboard.svh(160) @ 21571455000: uvm_test_top.env.sb [SB/SUMMARY] 
+  mode          pass   fail   latency(cyc)  writes
+  ML-KEM-NTT   50     0       9985         1792  
+  ML-KEM-INTT  34     0       12033        2048  
+  ML-DSA-NTT   54     0       11521        2048  
+  ML-DSA-INTT  46     0       13569        2304  
+  ops checked: 184   failed: 0   ACVP-KAT ops: 16
+UVM_INFO ntt_env_tests.svh(59) @ 21571455000: uvm_test_top [RESULT] *** UVM TEST PASSED *** (ntt_regress_test, 184 ops)
+UVM_INFO t/uvm/src/base/uvm_report_server.svh(864) @ 21571455000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   23
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[COV]     2
+[KAT]     1
+[REF]     1
+[RESULT]     1
+[RNTST]     1
+[SB/KAT]    16
+[SB/SUMMARY]     1
+
+- /home/claude/vl_src/test_regress/t/uvm/uvm_pkg_all_v2017_1_0_dpi.svh:16589: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.053 devel
+- Verilator: $finish at 22ms; walltime 16.098 s; speed 1.340 ms/s
+- Verilator: cpu 13.939 s on 1 threads; allocated 16 MB
